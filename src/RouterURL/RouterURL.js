@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import {
-    BrowserRouter as Router,
-    Route
+    Route,
+    Switch
   } from "react-router-dom";
-import Login from './../Component/Login'
-import Signup from './../Component/Signup'
+import Login from '../Component/Login'
+import Signup from '../Component/Signup'
+import LoginSignup from '../Component/LoginSignup'
 
 class RouterURL extends Component {
     render() {
         return (
             <div>
-                <Route path="/login" component={Login}/>
-                <Route path="/signup" component={Signup}/>
+                <Switch>
+                    <Route exact path="/" component={LoginSignup}/>
+                    <Route exact path="/login" component={Login}/>
+                    <Route exact path="/signup" component={Signup}/>
+                </Switch>
             </div>
         );
     }
