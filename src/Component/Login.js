@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Image} from 'react-bootstrap';
+import { Redirect } from 'react-router-dom';
 class Login extends Component {
     constructor(props) {
         super(props);
     
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            loggedInUser: false
         }
         this.emailChange = this.emailChange.bind(this)
         this.passwordChange = this.passwordChange.bind(this)
@@ -23,7 +25,7 @@ class Login extends Component {
             if(a == undefined) {
                 alert('Tài khoản hoặc mật khẩu không đúng, vui lòng kiểm tra lại')
             } else {
-                alert('Đăng nhập thành công')
+                this.setState({loggedInUser: true});
             }
         }
     }
@@ -34,6 +36,9 @@ class Login extends Component {
         this.setState({ password: event.target.value })
     }
     render() {
+        if(this.state.loggedInUser == true) {
+            return <Redirect to='/Kanban' />
+        }
         return (
            <div>
                <Container fluid>
