@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import './../Css/Login.css'
-import { Button, Container, Row, Col, Image } from 'react-bootstrap';
+import './../Css/LoginSignup.css'
+import { Button, Container, Row, Col } from 'react-bootstrap';
 import {BrowserRouter as Router, NavLink  } from "react-router-dom";
-import RouterURL from './../RouterURL/RouterURL'
-import hero from './../images/hero-a.svg'
-import logo from './../images/trello-logo-blue.svg'
 
 class LoginSignup extends Component {
     render() {
@@ -13,18 +10,18 @@ class LoginSignup extends Component {
                 <div>
                     <div className='menu'>
                         <div>
-                                <img src={logo} />
+                                <img src='/logo.svg' style={{height: '80px', width: '120px'}}/>
                                 <Button variant="warning">
-                                    <li>
-                                        <NavLink to="/login">Đăng nhập</NavLink>
+                                    <li >
+                                        <NavLink to="/login"><b>Đăng nhập</b></NavLink>
                                     </li>
                                 </Button>{' '}
-                                <Button variant="warning">
+                                <Button variant="danger">
                                     <li>
-                                        <NavLink to="/signup">Đăng ký</NavLink>
+                                        <NavLink to="/signup"><b>Đăng ký</b></NavLink>
                                     </li>
-                                </Button>{' '}  
-                        </div>                                               
+                                </Button>
+                        </div>                                           
                     </div>
                     <div className='introduce'>
                         <Container>
@@ -34,7 +31,7 @@ class LoginSignup extends Component {
                                     <h4>Các bảng, danh sách, và thẻ của Trello cho phép các nhóm tổ chức và ưu tiên các dự án một cách vui vẻ, linh hoạt và xứng đáng.</h4>
                                 </Col>
                                 <Col>
-                                    <Image src={hero} thumbnail />
+                                    <img src='/Hero.svg' style={{height: '100%', width: '100%'}}/>
                                 </Col>
                             </Row>
                         </Container>

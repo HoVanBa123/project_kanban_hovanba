@@ -1,6 +1,26 @@
-.signup {
-    width: 100px;
-    height: 500px;
-    background: white;
-    margin-bottom: 50px;
+.interface {
+    text-align: center;
+}
+.item {
+    height: 320px;
+    background: #f0efef;
+    border-radius: 20px;
+}
+input {
+    margin: 10px;
+    line-height: 35px;
+    border: 3px solid #cbc169;
+    border-radius: 5px;
+}
+.item p {
+    font-size: 25px;
+    padding-top: 15px;
+}
+.item button {
+    height: 35px;
+    width: 330px;
+    background: #5AAC44;;
+    border: 3px solid #5AAC44;;
+    border-radius: 5px;
+    font-size: 20px;
 }

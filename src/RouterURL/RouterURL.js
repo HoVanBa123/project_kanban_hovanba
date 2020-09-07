@@ -6,6 +6,7 @@ import {
 import Login from '../Component/Login'
 import Signup from '../Component/Signup'
 import LoginSignup from '../Component/LoginSignup'
+import Kanban from '../Component/Kanban';
 
 class RouterURL extends Component {
     render() {
@@ -15,6 +16,7 @@ class RouterURL extends Component {
                     <Route exact path="/" component={LoginSignup}/>
                     <Route exact path="/login" component={Login}/>
                     <Route exact path="/signup" component={Signup}/>
+                    <Route exact path="/kanban" component={Kanban}/>
                 </Switch>
             </div>
         );
